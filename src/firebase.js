@@ -1,16 +1,16 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/auth'
 
-var firebaseConfig = {
-    apiKey: "AIzaSyAo76CNvJ8Dj5g1oGWSv_4bQMWfP9XofPw",
-    authDomain: "test-bf2af.firebaseapp.com",
-    projectId: "test-bf2af",
-    storageBucket: "test-bf2af.appspot.com",
-    messagingSenderId: "148188561977",
-    appId: "1:148188561977:web:afe2ca3411f86ed4b0c3e8"
-  };
-
-  // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const firebaseConfig = {
+  apiKey: "AIzaSyBL9PY68fBt3QNLHPZ8ASEq5ACIknD17SM",
+  authDomain: "parkingspace-331613.firebaseapp.com",
+  databaseURL: "https://parkingspace-331613-default-rtdb.firebaseio.com",
+  projectId: "parkingspace-331613",
+  storageBucket: "parkingspace-331613.appspot.com",
+  messagingSenderId: "261880181840",
+  appId: "1:261880181840:web:d251a65c2f6a338bb1cd55",
+  measurementId: "G-VD0DTZ8LE0"
+};
 
 export default firebase
+
