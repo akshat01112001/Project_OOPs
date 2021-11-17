@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="refer.css">
     <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
     <meta charset="utf-8">
-    <title>Doc</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -39,23 +39,20 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js";
-
         const firebaseConfig = {
             apiKey: "AIzaSyBL9PY68fBt3QNLHPZ8ASEq5ACIknD17SM",
             authDomain: "parkingspace-331613.firebaseapp.com",
+            databaseURL: "https://parkingspace-331613-default-rtdb.firebaseio.com",
             projectId: "parkingspace-331613",
             storageBucket: "parkingspace-331613.appspot.com",
             messagingSenderId: "261880181840",
             appId: "1:261880181840:web:d251a65c2f6a338bb1cd55",
             measurementId: "G-VD0DTZ8LE0"
         };
-
         const app = initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-
+        const db=
         const analytics = getAnalytics(app);
     </script>
-    <script src="main.js"></script>
 </body>
 
 </html>
