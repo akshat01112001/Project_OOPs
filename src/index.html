@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="style1.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>OTP Verification</h1>
+      <form method="post" onSubmit={this.onSignInSubmit}>
+        <div id="sign-in-button"></div>
+        <div class="txt_field">
+          <input type="number" name="mobile" onChange={this.handleChange} required>
+          <span></span>
+          <label>Mobile number</label>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+      <form onSubmit={this.onSubmitOTP}>
+        <div class="txt_field">
+          <input type="number" name="otp" onChange={this.handleChange} required>
+          <span></span>
+          <label>OTP</label>
+        </div> 
+        <input type="submit" value="Send">
+        <div class="signup_link">
+        </div>
+      </form>
+    </div>
+
+    <script>
+      import React from 'react'
+import firebase from './firebase'
+import 'firebase/auth';
+import 'firebase/compat/auth';
+
+class App extends React.Component {
+  handleChange = (e) =>{
+    const {name, value } = e.target
+    this.setState({
+        [name]: value
+      })
+  }
+  configureCaptcha = () =>{
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
+      'size': 'invisible',
+      'callback': (response) => {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+        this.onSignInSubmit();
+        console.log("Recaptca varified")
+      },
+      defaultCountry: "IN"
+    });
+  }
+  onSignInSubmit = (e) => {
+    e.preventDefault()
+    this.configureCaptcha()
+    const phoneNumber = "+91" + this.state.mobile
+    console.log(phoneNumber)
+    const appVerifier = window.recaptchaVerifier;
+    firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+        .then((confirmationResult) => {
+          // SMS sent. Prompt user to type the code from the message, then sign the
+          // user in with confirmationResult.confirm(code).
+          window.confirmationResult = confirmationResult;
+          console.log("OTP has been sent")
+          // ...
+        }).catch((error) => {
+          // Error; SMS not sent
+          // ...
+          console.log("SMS not sent")
+        });
+  }
+  onSubmitOTP = (e) =>{
+    e.preventDefault()
+    const code = this.state.otp
+    console.log(code)
+    window.confirmationResult.confirm(code).then((result) => {
+      // User signed in successfully.
+      const user = result.user;
+      console.log(JSON.stringify(user))
+      alert("User is verified")
+      // ...
+    }).catch((error) => {
+      // User couldn't sign in (bad verification code?)
+      // ...
+    });
+  }
+}
+export default App
+    </script>
+    <script>
+      import firebase from 'firebase/compat/app';
+import 'firebase/auth'
+
+var firebaseConfig = {
+    apiKey: "AIzaSyAo76CNvJ8Dj5g1oGWSv_4bQMWfP9XofPw",
+    authDomain: "test-bf2af.firebaseapp.com",
+    projectId: "test-bf2af",
+    storageBucket: "test-bf2af.appspot.com",
+    messagingSenderId: "148188561977",
+    appId: "1:148188561977:web:afe2ca3411f86ed4b0c3e8"
+  };
+
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+export default firebase
+    </script>
+
+  </body>
+</html>
