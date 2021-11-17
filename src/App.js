@@ -16,7 +16,7 @@ class App extends React.Component {
       'callback': (response) => {
         // reCAPTCHA solved, allow signInWithPhoneNumber.
         this.onSignInSubmit();
-        console.log("Recaptca varified")
+        console.log("Recaptca verified")
       },
       defaultCountry: "IN"
     });
