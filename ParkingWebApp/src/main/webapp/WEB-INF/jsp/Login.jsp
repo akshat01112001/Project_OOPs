@@ -29,22 +29,18 @@
                     <button>Submit</button>
                     <div  class="g-signin2" data-margin=auto data-onsuccess="onSignIn"></div>
                     <script>
-                        <p align="center">
                         function onSignIn(){
                             location.href="DashBoard.jsp"
                         }
-                        </p>
                     </script>
                     <br><br>
                     <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
                         data-auto-logout-link="false" data-use-continue-as="false" data-onsuccess="onSignIn">
                     </div>
                     <script>
-                        <p align="center">
                         function onSignIn(){
                             location.href="DashBoard.jsp"
                         }
-                        </p>
                     </script>
                 </fieldset>
             </table>
