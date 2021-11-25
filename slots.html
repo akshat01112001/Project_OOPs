@@ -11,7 +11,7 @@
   <body>
 
     <div class="car-parkingslot">
-      <label>Select Parking Slot</label>
+      <label><h1>Select Parking Slot</h1></label>
     </div>
 
     <ul class="showcase">
@@ -87,7 +87,7 @@
 
     <div>
       <script src="Dashboard.js"></script>
-      <form>
+      <form id="form1">
         <label for="location">Give your location:</label>
         <select id="location">
           <option value="none">Select your location</option>
@@ -104,8 +104,14 @@
         <input type="time" id="check_out_time"><br><br>
         <label for="phone_no">Give your phone number:</label>
         <input type="tel" id="phone_no" maxlength="10" minlength="10" placeholder="Phone Number"><br><br>
-        <center><input type="submit" value="Submit" class="submit-btn"></center>
-      </form>
+        </form>
+        <center>
+          <div class="liquid">
+          <button type ="submit" form="form1">
+          <span>Submit</span>
+          </button>
+          </div>
+        </center>
     </div>
 
     <br><br>
