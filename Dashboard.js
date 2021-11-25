@@ -1,6 +1,8 @@
-let date = document.getElementById('date').value;
-let check_in_time = document.getElementById('check-in time').value;
-let check_out_time = document.getElementById('check_out_time').value;
-let phone_no = document.getElementById('phone no').value;
 
-alert(date+' '+check_in_time+' '+check_out_time+' '+phone_no+' ')
+var location = document.querySelector('#location').value;
+var date = document.querySelector('#date').value;
+var check_in_time = document.querySelector('#check_in_time').value;
+var check_out_time = document.querySelector('#check_out_time').value;
+var phone_no = document.querySelector('#phone_no').value;
+
+alert(date + ' ' + check_in_time + ' ' + check_out_time + ' ' + phone_no);
