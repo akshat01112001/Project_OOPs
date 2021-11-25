@@ -58,20 +58,17 @@
                 }
             </script>
             <br><br>
-            
         </fieldset>
     </table>
     <br><br>
-    <table class="wrap">
-        <fieldset>
-            <legend>
-                <h1>Create an account</h1>
-            </legend>
-        </fieldset>
-    </table>
-</div>
+        <table class="wrap">
+            <fieldset>
+                <legend>
+                    <h1>Create an account</h1>
+                </legend>
+            </fieldset>
+        </table>
+    </div>
 
-  
-</div>
 </body>
 </html>
