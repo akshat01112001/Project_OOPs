@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Car Parking Slots availability</title>
+    <script src="Dashboard.js"></script>
   </head>
   <body>
+
     <div class="car-parkingslot">
-      <label> Select a Car Parking Slot</label>
+      <label> Select Parking Slot</label>
     </div>
-   
 
     <ul class="showcase">
-      
       <li>
         <div class="slot"></div>
         <small>Available</small>
@@ -82,11 +82,36 @@
         <div class="slot"></div>
       </div>
     </div>
-    
+
+    <br><br>
+
+    <div>
+      <form>
+        <label for="location">Give your location:</label>
+        <select id="location">
+          <option value="none">Select your location</option>
+          <option value="1">North</option>
+          <option value="2">South</option>
+          <option value="3">East</option>
+          <option value="4">West</option>
+        </select><br><br>
+        <label for="date">Select your date:</label>
+        <input type="date" id="date"><br><br>
+        <label for="check-in time">Select your check-in time:</label>
+        <input type="time" id="check-in time"><br><br>
+        <label for="check-out time">Select your check-out time:</label>
+        <input type="time" id="check-out time"><br><br>
+        <label for="phone no">Give your phone number:</label>
+        <input type="tel" id="phone no" maxlength="10" minlength="10" placeholder="Phone Number"><br><br>
+        <center><input type="submit" value="Submit" class="submit-btn"></center>
+      </form>
+    </div>
+
+    <br><br>
 
     <p class="text">
-      You have selected <span id="count">0</span> slot for a price of RS.<span id="total">0</span>
+      You have selected <span id="count">0</span> slot for a price of ₹. <span id="total">0</span>
     </p>
-    <script src="script.js"></script>
+
   </body>
 </html>
