@@ -14,8 +14,13 @@ public class ParkingController {
 	
 	@RequestMapping("/dashboard")
 	public String dashboard() {
-		System.out.println("This is the Login Page");
+		System.out.println("This is the Dashboard");
 		return "DashBoard";
 	}
 	
+	@RequestMapping("/registrationdetails")
+	public String registrationdetails() {
+		System.out.println("This is the Registration Details.");
+		return "RegistrationDetails";
+	}
 }
