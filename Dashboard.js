@@ -72,40 +72,16 @@ container.addEventListener("click", e => {
 // Initial count and total set
 updateSelectedCount();
 
-function connection() {
-    var mysql = require('mysql');
-    var con = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "Project2OOPs!",
-        database: "PBSC_Parking_DB"
-    });
 
-    con.connect(function (err) {
-        if (err) throw err;
-        console.log("connected");
-    });
+var slot = document.getElementById("slot").innerText;
+var date = document.getElementById("date").innerText;
+var check_in_time = document.getElementById("check_in_time").innerText;
+var check_out_time = document.getElementById("check_out_time").innerText;
+var phone_no = document.getElementById("phone_no").innerText;
+var total = document.getElementById("total").innerText;
 
-    var slot = document.getElementById("slot").innerText;
-    var date = document.getElementById("date").innerText;
-    var check_in_time = document.getElementById("check_in_time").innerText;
-    var check_out_time = document.getElementById("check_out_time").innerText;
-    var phone_no = document.getElementById("phone_no").innerText;
-    var total = document.getElementById("total").innerText;
-
-    if (total == 0) {
-        alert("Select at least one slot");
-    }
-
-    alert(slot + "', '" + date + "','" + check_in_time + "','" + check_out_time + "','" + phone_no + "','" + total);
-
-    var sql = "INSERT INTO accounts (slot, date, chech_in_time, check_out_time, phone_no, total) VALUES ('" + slot + "', '" + date + "','" + check_in_time + "','" + check_out_time + "','" + phone_no + "','" + total + "')";
-    con.query(sql, function (err, result) {
-        if (err) {
-            throw err;
-        }
-        console.log(result.affectedRows + " record(s) updated");
-    });
-
-    con.end();
+if (total == 0) {
+    alert("Select at least one slot");
 }
+alert(slot + "', '" + date + "','" + check_in_time + "','" + check_out_time + "','" + phone_no + "','" + total);
+
