@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #28273f;
+  background-color: #242333;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -16,11 +16,11 @@ body {
   margin: 0;
 }
 
-.car-parkingslot {
+.slot-container {
   margin: 20px 0;
 }
 
-.car-parkingslot select {
+.slot-container select {
   background-color: #fff;
   border: 0;
   border-radius: 5px;
@@ -51,24 +51,24 @@ body {
   background-color: green;
 }
 
-.slot.booked {
+.slot.sold {
   background-color: #fff;
 }
 
 .slot:nth-of-type(2) {
-  margin-right: 35px;
+  margin-right: 18px;
 }
 
 .slot:nth-last-of-type(2) {
-  margin-left: 35px;
+  margin-left: 18px;
 }
 
-.slot:not(.booked):hover {
+.slot:not(.sold):hover {
   cursor: pointer;
   transform: scale(1.2);
 }
 
-.showcase .slot:not(.booked):hover {
+.showcase .slot:not(.sold):hover {
   cursor: default;
   transform: scale(1);
 }
