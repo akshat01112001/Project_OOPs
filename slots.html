@@ -11,7 +11,7 @@
   <body>
 
     <div class="slot-container">
-      <label> Give your parking location:</label>
+      <label for="slot"> Give your parking location:</label>
       <select id="slot">
         <option value="1">North</option>
         <option value="2">South</option>
@@ -102,26 +102,23 @@
 
     <br><br>
 
-    <div>
-      <form id="form1" action="">
-        <label for="location"></label>
-        <label for="date">Select your date:</label>
-        <input type="date" id="date"><br><br>
-        <label for="check_in_time">Select your check-in time:</label>
-        <input type="time" id="check_in_time"><br><br>
-        <label for="check_out_time">Select your check-out time:</label>
-        <input type="time" id="check_out_time"><br><br>
-        <label for="phone_no">Give your phone number:</label>
-        <input type="tel" id="phone_no" maxlength="10" minlength="10" placeholder="Phone Number"><br><br>
-        </form>
-        <center>
-          <div class="liquid">
-          <button type ="submit" form="form1">
-          <span>Submit</span>
-          </button>
-          </div>
-        </center>
-    </div>
+    <form id="form1">
+      <label for="date">Select your date:</label>
+      <input type="date" id="date" required><br><br>
+      <label for="check_in_time">Select your check-in time:</label>
+      <input type="time" id="check_in_time" required><br><br>
+      <label for="check_out_time">Select your check-out time:</label>
+      <input type="time" id="check_out_time" required><br><br>
+      <label for="phone_no">Give your phone number:</label>
+      <input type="tel" id="phone_no" maxlength="10" minlength="10" placeholder="Phone Number" required><br><br>
+    </form>
+    <center>
+      <div class="liquid">
+      <button type ="submit" form="form1" value="submit">
+      <span>Submit</span>
+      </button>
+      </div>
+    </center>
 
     <br><br>
 
