@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Parking.jpeg" type="image/x-icon" />
+    <title>Parking Slot Selection</title>
+  </head>
+  <body>
+
+    <form id="form1">
+      <div class="slot-container">
+        <label for="slot"> Give your parking location:</label>
+        <select id="slot">
+          <option value="North">North</option>
+          <option value="South">South</option>
+          <option value="East">East</option>
+          <option value="West">West</option>
+        </select>
+      </div>
+      
+      <ul class="showcase">
+        <li>
+          <div class="slot"></div>
+          <small>Available</small>
+        </li>
+        <li>
+          <div class="slot selected"></div>
+          <small>Selected</small>
+        </li>
+        <li>
+          <div class="slot sold"></div>
+          <small>Sold</small>
+        </li>
+      </ul>
+      <div class="container">
+        <div class="screen"></div>
+      
+        <div class="row">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+      
+        <div class="row">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot sold"></div>
+          <div class="slot sold"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+        <div class="row">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot sold"></div>
+          <div class="slot sold"></div>
+        </div>
+        <div class="row">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+        <div class="row">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot sold"></div>
+          <div class="slot sold"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+        </div>
+        <div class="row">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot sold"></div>
+          <div class="slot sold"></div>
+          <div class="slot sold"></div>
+          <div class="slot"></div>
+        </div>
+      </div>
+
+      <br><br>
+
+        <label for="date">Select your date:</label>
+        <input type="date" id="date" required><br><br>
+        <label for="check_in_time">Select your check-in time:</label>
+        <input type="time" id="check_in_time" required><br><br>
+        <label for="check_out_time">Select your check-out time:</label>
+        <input type="time" id="check_out_time" required><br><br>
+        <label for="phone_no">Give your phone number:</label>
+        <input type="tel" id="phone_no" maxlength="10" minlength="10" placeholder="Phone Number" required><br><br>
+        <label for="extras">Complementary Services</label><br><br>
+        <input type="checkbox" id="extras" value="500">Car Washing<br>
+        <input type="checkbox" id="extras" value="500">Air Filling
+        <br><br>
+    </form>
+    <center>
+      <div class="liquid">
+      <button type ="submit" form="form1" value="submit">
+      <span>Submit</span>
+      </button>
+      </div>
+    </center>
+
+    <br><br>
+
+    <p class="text">
+      You have selected <span id="count">0</span> slot for a price of ₹. <span id="total">0</span>
+    </p>
+
+    <script src="Dashboard.js"></script>
+
+  </body>
+</html>
