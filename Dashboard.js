@@ -83,5 +83,3 @@ var total = document.getElementById("total").innerText;
 if (total == 0) {
     alert("Select at least one slot");
 }
-alert(slot + "', '" + date + "','" + check_in_time + "','" + check_out_time + "','" + phone_no + "','" + total);
-
