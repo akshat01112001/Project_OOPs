@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 .topnav {
   background-color: #333;
@@ -49,4 +50,15 @@
     display: block;
     text-align: left;
   }
+}
+
+body {
+  background-color: #28273f;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  margin: 0;
 }
