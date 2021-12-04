@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Slot Management</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,17 +27,19 @@
     <div>
         <center>
         <h1>Add Slot(s)</h1><br>
-        <label for="number">Number of Slot(s) to be inserted:</label>
-        <input type="number" placeholder="Enter Number" id="number">
+        <form id="form1">
+            <label for="number">Number of Slot(s) to be inserted:</label>
+            <input type="number" placeholder="Enter Number" id="number">
+        </form>
         <br><br>
         <center>
             <div class="liquid">
-                <button type="submit" value="submit">
+                <button type="submit" value="submit" form="form1">
                     <span>Submit</span>
                 </button>
             </div>
         </center>
-        <script src=></script>
+        <script src="addslots.js"></script>
         </center>
     </div>
 </body>
