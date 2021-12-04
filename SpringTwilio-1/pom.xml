@@ -5,21 +5,25 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.0</version>
+		<version>2.6.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>ParkingWebApp</artifactId>
+	<artifactId>SpringTwilio-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ParkingWebApp</name>
-	<description>Parking Space Management Project</description>
+	<name>SpringTwilio-1</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,42 +37,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
-
+		<dependency>
+ 			<groupId>com.twilio.sdk</groupId>
+  			<artifactId>twilio</artifactId>
+  			<version>8.22.1</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper -->
-		<dependency>
-    		<groupId>org.apache.tomcat.embed</groupId>
-    		<artifactId>tomcat-embed-jasper</artifactId>
-    		<version>9.0.55</version>
-		</dependency>
-		<dependency>
-    		<groupId>javax.servlet</groupId>
-    		<artifactId>jstl</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>io.projectreactor</groupId>
 			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
 		</dependency>
-		<!-- H2 Database -->
- 		<dependency>
- 			<groupId>com.h2database</groupId>
- 			<artifactId>h2</artifactId>
- 		</dependency>
-		<dependency>  
-			<groupId>org.springframework.data</groupId>  
-			<artifactId>spring-data-jpa</artifactId>  
-			<version>2.2.3.RELEASE</version>  
-		</dependency>
-		<dependency>  
-			<groupId>org.springframework.boot</groupId>  
-			<artifactId>spring-boot-starter-data-jpa</artifactId>  
-			<version>2.2.2.RELEASE</version>  
-		</dependency>
-		
 	</dependencies>
 
 	<build>
