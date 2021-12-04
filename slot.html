@@ -25,7 +25,7 @@
     </div>
     <center>
     <h1>Slot Management System</h1>
-    <form id="form1">
+    <form id="form1" name="selection">
     <label for="selection">Give your preferance:</label>
     <select id="selection">
         <option value="0">Select your requirement</option>
@@ -34,12 +34,20 @@
     </select>
     <br><br>
     </form>
+    <script type="text/javascript">
+        var url=document.getElementById("selection");
+        url.onchange=function(){
+            var opt=this.options[this.selectedIndex];
+            if(opt.value!="0"){
+                window.open(opt.value,"selection","");
+            }
+        }
+    </script>
     <div class="liquid">
         <button type="submit" value="submit" form="form1">
             <span>Submit</span>
         </button>
     </div>
     </center>
-    <script src="Slot.js"></script>
 </body>
 </html>
