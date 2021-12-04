@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="Parking.jpeg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>User Detail</title>
+</head>
+<body>
+    <header>
+        <img src="admin.png">
+    </header>
+    <div class="topnav" id="myTopnav">
+        <a href="userdetail.html">Users</a>
+        <a href="slot.html">Slot Management</a>
+        <a href="worker.html">Worker Management</a>
+        <a href="Login.html">Logout</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div align="center" class="container my-2">
+        <h1>User Details</h1>
+        <a th:href="@{/register}" class="btn btn-primary btn-sm mb-3">Register</a>
+        <table>
+            <table border="1" class="table table-striped table-responsive-md">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Phone</th>
+                        <th>Car Registration</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="detail:${listDetails}">
+                        <td th:text="${detail.Email}"></td>
+                        <td th:text="${detail.FirstName}"></td>
+                        <td th:text="${detail.LastName}"></td>
+                        <td th:text="${detail.Username}"></td>
+                        <td th:text="${detail.Password}"></td>
+                        <td th:text="${detail.Phone}"></td>
+                        <td th:text="${detail.RegNo}"></td>
+                        <td th:text="${detail.Address}"></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+</body>
+</html>
