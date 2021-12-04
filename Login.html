@@ -9,49 +9,50 @@
         <meta name="google-signin-client_id" content="261880181840-jjb40a9h39c4d9im6qa8258v243jucev.apps.googleusercontent.com">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <div id="fb-root"></div>
+        <link rel="icon" href="Parking.jpeg" type="image/x-icon" />
         <script async defer crossorigin="anonymous"
             src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0&appId=256317326529122&autoLogAppEvents=1"
             nonce="Qfw8z5xs"></script>
 </head>
 <body>
 
-<div class="heading">
-            <table class="wrap">
-                <fieldset>
-                    <legend>
-                        <h1>Login</h1>
-                    </legend>
-                    <input type="username" placeholder="Username"><br>
-                    <input type="password" placeholder="Password"><br><br>
-                    <center>
-                    <div  class="g-signin2" data-margin=auto data-onsuccess="onSignIn"></div>
-                    <script>
-                        function onSignIn(){
-                            location.href="DashBoard.jsp"
-                        }
-                    </script>
-                    </center>
-                    <br><br>
-                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
-                        data-auto-logout-link="false" data-use-continue-as="false" data-onsuccess="onSignIn">
-                    </div>
-                    <script>
-                        function onSignIn(){
-                            location.href="DashBoard.jsp"
-                        }
-                    </script><br><br><br>
-                    <center>
-                    <div class="liquid">
-                        <button type="submit" value="submit">
-                            <span>Submit</span>
-                        </button>
-                    </div>
-                    <a href="Registration.html" style="color: aliceblue;">New here? Create an account</a>
-                    </center>
-                </fieldset>
-            </table>
-            <br><br>
-        </div>
+    <div class="heading">
+        <table class="wrap">
+            <fieldset>
+                <legend>
+                    <h1>Login</h1>
+                </legend>
+                <input type="username" placeholder="Username"><br>
+                <input type="password" placeholder="Password"><br><br>
+                <center>
+                <div  class="g-signin2" data-margin=auto data-onsuccess="onSignIn"></div>
+                <script>
+                    function onSignIn(){
+                        location.href="DashBoard.jsp"
+                    }
+                </script>
+                </center>
+                <br><br>
+                <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
+                    data-auto-logout-link="false" data-use-continue-as="false" data-onsuccess="onSignIn">
+                </div>
+                <script>
+                    function onSignIn(){
+                        location.href="DashBoard.jsp"
+                    }
+                </script><br><br><br>
+                <center>
+                <div class="liquid">
+                    <button type="submit" value="submit">
+                        <span>Submit</span>
+                    </button>
+                </div>
+                <a href="Registration.html" style="color: aliceblue;">New here? Create an account</a>
+                </center>
+            </fieldset>
+        </table>
+        <br><br>
+    </div>
 
 </body>
 </html>
