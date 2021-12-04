@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slot Management</title>
-    <link rel="icon" href="Parking.jpeg" type="image/x-icon" />
+    <title></title>
     <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="icon" href="Parking.jpeg" type="image/x-icon" />
 </head>
 <body>
     <header>
@@ -23,31 +23,21 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
-    <center>
-    <h1>Slot Management System</h1>
-    <form id="form1" name="selection">
-    <label for="selection">Give your preferance:</label>
-    <select id="selection">
-        <option value="0">Select your requirement</option>
-        <option value="addslots.html">Add Slots</option>
-        <option value="2">Delete Slots</option>
-    </select>
-    <br><br>
-    </form>
-    <script type="text/javascript">
-        var url=document.getElementById("selection");
-        url.onchange=function(){
-            var opt=this.options[this.selectedIndex];
-            if(opt.value!="0"){
-                window.open(opt.value,"selection","");
-            }
-        }
-    </script>
-    <div class="liquid">
-        <button type="submit" value="submit" form="form1">
-            <span>Submit</span>
-        </button>
+    <div>
+        <center>
+        <h1>Add Slot(s)</h1><br>
+        <label for="number">Number of Slot(s) to be inserted:</label>
+        <input type="number" placeholder="Enter Number" id="number">
+        <br><br>
+        <center>
+            <div class="liquid">
+                <button type="submit" value="submit">
+                    <span>Submit</span>
+                </button>
+            </div>
+        </center>
+        <script src=></script>
+        </center>
     </div>
-    </center>
 </body>
 </html>
