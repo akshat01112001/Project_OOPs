@@ -28,29 +28,23 @@
 
     <div align="center" class="container my-2">
         <h1>Workers' Details</h1>
-        <a th:href="@{/register}" class="btn btn-primary btn-sm mb-3">Register</a>
+        <a th:href="@{/register}" class="btn btn-primary btn-sm mb-3">Add Worker</a>
         <table>
             <table border="1" class="table table-striped table-responsive-md">
                 <thead>
                     <tr>
-                        <th>Email</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                        <th>Password</th>
+                        <th>Name</th>
+                        <th>Rating</th>
                         <th>Phone</th>
-                        <th>Address</th>
+                        <th>Comment(s)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="detail:${listDetails}">
-                        <td th:text="${detail.Email}"></td>
-                        <td th:text="${detail.FirstName}"></td>
-                        <td th:text="${detail.LastName}"></td>
-                        <td th:text="${detail.Username}"></td>
-                        <td th:text="${detail.Password}"></td>
+                        <td th:text="${detail.Name}"></td>
+                        <td th:text="${detail.Rating}"></td>
                         <td th:text="${detail.Phone}"></td>
-                        <td th:text="${detail.Address}"></td>
+                        <td th:text="${detail.Comments}"></td>
                     </tr>
                 </tbody>
             </table>
