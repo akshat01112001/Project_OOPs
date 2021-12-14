@@ -1,0 +1,7 @@
+server:
+  port: 8060
+
+twilio:
+  account_sid: ACac0b24fa1811e9fb8d37981dc57b17ed
+  auth_token: b36f016fa1d7fb186ceb88c34a1a7577
+  service_id: VAbfaf8a20e01be214e35527c259bc9e82
